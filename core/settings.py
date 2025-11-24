@@ -27,7 +27,8 @@ SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key-for-dev')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["todo-be-1-glf7.onrender.com", "127.0.0.1", "localhost"]
+# ALLOWED_HOSTS = ["todo-be-1-glf7.onrender.com", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="").split(",")
 
 
 # Application definition
